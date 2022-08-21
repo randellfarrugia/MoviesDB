@@ -36,7 +36,7 @@ Before sending any requests make sure to insert the Authorization Header in the 
  
 ### Query Samples:
  
-#### Get All movies with filters and sorting
+#### Get All movies with optional filters and sorting
 ---------------------------------------------
 ```
   query
