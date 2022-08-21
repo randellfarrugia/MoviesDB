@@ -134,15 +134,15 @@ mutation($newMovie:MovieInput!){
 #### Update Movie
 ---------------------------------------------
 ```
-mutation($newMovie:MovieInput!){
-  updateMovie(updateMovie:$newMovie) {        
+mutation($updateMovie:MovieInput!){
+  updateMovie(updateMovie:$updateMovie) {        
   }
 }
 ```
 *variables :*
 ```
 {
-  "newMovie": {
+  "updateMovie": {
     "id": 40,
     "name": "Space Jam",    
     "yearReleased":1996,
