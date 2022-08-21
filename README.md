@@ -28,8 +28,9 @@ Once the request is sent, a JWT with a 1 year expiry will be provided (the lengt
 Open up the browser and load up either BananaCakePop (https://localhost:7275/bananacakepop/ui/) or Playground(https://localhost:7275/ui/playground) both of which are configured in this project
 
 Before sending any requests make sure to insert the Authorization Header in the HTTP Headers section as a Bearer Token with the JWT token that we previously got 
-
+```
  "Authorization":"Bearer <your token>"
+ ```
  
  Once this is done, the setup is finished and you can perform any queries or mutations (only admin has access to mutations)
  
