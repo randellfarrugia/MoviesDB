@@ -18,9 +18,9 @@ Some examples will be provided at the end of this file.
     {"email":"admin@abc.com","password":"!!admin@x_321"}
   ```  
  For a user role, send the following request -
-    ```
+ ```
     {"email":"johndoe@abc.com","password":"%john811.ttt$"}
-    ```
+ ```
 These details can be changed by providing different values in the database, although do note that the password is HMACSHA256 hashed in the database.
 
 Once the request is sent, a JWT with a 1 year expiry will be provided (the length of the token is for testing purposes)
