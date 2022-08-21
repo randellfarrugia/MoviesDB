@@ -14,13 +14,13 @@ Some examples will be provided at the end of this file.
  There are two roles - Admin and User. Admin has access to all functionalities while User has only read (get) functionality.
  
  In order to get an Admin role send the following request -
-
+  ```
     {"email":"admin@abc.com","password":"!!admin@x_321"}
-    
+  ```  
  For a user role, send the following request -
-     
+    ```
     {"email":"johndoe@abc.com","password":"%john811.ttt$"}
-
+    ```
 These details can be changed by providing different values in the database, although do note that the password is HMACSHA256 hashed in the database.
 
 Once the request is sent, a JWT with a 1 year expiry will be provided (the length of the token is for testing purposes)
@@ -55,7 +55,7 @@ Before sending any requests make sure to insert the Authorization Header in the 
  
 #### Get Top5 Rated Movies (Optional Filters)
 ---------------------------------------------
-
+```
 query
 {
   top5RatedMovies(where: {genre:{eq:"Thriller"}})
@@ -68,12 +68,12 @@ query
    yearReleased    
   }
 }
- 
+```
  
  
 #### Get Single Movie By ID
 ---------------------------------------------
-
+```
 query
 {
   movieByID(id:1) {
@@ -85,12 +85,12 @@ query
     director
   }
 }
- 
+``` 
  
  
 #### Get Single Movie By Name
 ---------------------------------------------
-
+```
 query
 {
   movieByName(name: "Shawshank Redemption") {
@@ -102,22 +102,22 @@ query
     director
   }
 }
-
+```
  
  
 ### Mutation Samples:
 
 #### Save New Movie
 ---------------------------------------------
-
+```
 mutation($newMovie:MovieInput!){
   saveMovie(newMovie:$newMovie) {
     id
   }
 }
-
+```
 *variables:*
-
+```
 {
   "newMovie": {
     "id": 0,
@@ -128,19 +128,19 @@ mutation($newMovie:MovieInput!){
     "director":"Joe Pytka"
   }
 }
-
+```
  
  
 #### Update Movie
 ---------------------------------------------
-
+```
 mutation($newMovie:MovieInput!){
   updateMovie(updateMovie:$newMovie) {        
   }
 }
-
+```
 *variables :*
-
+```
 {
   "newMovie": {
     "id": 40,
@@ -151,33 +151,34 @@ mutation($newMovie:MovieInput!){
     "rating": 7.5
   }
 }
-
+```
 
  
 #### Delete Movie By Name
 ---------------------------------------------
-
+```
 mutation($name:String!){
   deleteMovieByName(name:$name)
 }
-
+```
 *variables :*
- 
+```
 {
   "name": "Space Jam"
 }
-
+```
  
  
 #### Delete Movie By ID
 ---------------------------------------------
-
+```
 mutation($id:Int!){
   deleteMovieByID(id:$id)
 }
-
+```
 *variables :*
-
+```
 {
   "id": 40
 }
+```
