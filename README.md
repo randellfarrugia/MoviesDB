@@ -37,10 +37,10 @@ Before sending any requests make sure to insert the Authorization Header in the 
  
 #### Get All movies with filters and sorting
 ---------------------------------------------
-
+```
   query
   {
-    allMovies(where: {genre:{eq:"Thriller"}} order:{rating:DESC} )
+    allMovies(where: {genre:{eq:"Thriller"}} order:{rating:DESC})
     {
        id
        name
@@ -50,7 +50,7 @@ Before sending any requests make sure to insert the Authorization Header in the 
        yearReleased 
     }
   }
- 
+ ```
  
  
 #### Get Top5 Rated Movies (Optional Filters)
