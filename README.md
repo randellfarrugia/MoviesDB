@@ -25,6 +25,11 @@ These details can be changed by providing different values in the database, alth
 
 Once the request is sent, a JWT with a 1 year expiry will be provided (the length of the token is for testing purposes)
 
+#### Sample JWT Token with Admin rights and expiry date of 21 August 2023
+```
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIwMTY5MTU5NS0wM2Q1LTQ0MDAtOTQ2NC1mOGQzYmYyOTVhOTEiLCJpYXQiOiIyMS8wOC8yMDIyIDA3OjIwOjEwIiwiVXNlcklkIjoiMSIsIkRpc3BsYXlOYW1lIjoiU3VwZXIgQWRtaW4iLCJVc2VyTmFtZSI6IlNBIiwiRW1haWwiOiJhZG1pbkBhYmMuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2OTI2MDI0MTAsImlzcyI6IkpXVEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSldUU2VydmljZUNsaWVudCJ9.iwxHq77zjgVr2hHnlVU3CmMpGGqQsP_k_d-EjxyBDZ4
+```
+
 Open up the browser and load up either BananaCakePop (https://localhost:7275/bananacakepop/ui/) or Playground(https://localhost:7275/ui/playground) both of which are configured in this project
 
 Before sending any requests make sure to insert the Authorization Header in the HTTP Headers section as a Bearer Token with the JWT token that we previously got 
