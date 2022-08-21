@@ -64,7 +64,7 @@ Before sending any requests make sure to insert the Authorization Header in the 
 ```
 query
 {
-  top5RatedMovies(where: {genre:{eq:"Thriller"}})
+  top5RatedMovies
   {
    id
    name
