@@ -50,7 +50,9 @@ Before sending any requests make sure to insert the Authorization Header in the 
        yearReleased 
     }
   }
-  
+ 
+ 
+ 
 #### Get Top5 Rated Movies (Optional Filters)
 ---------------------------------------------
 
@@ -66,7 +68,9 @@ query
    yearReleased    
   }
 }
-
+ 
+ 
+ 
 #### Get Single Movie By ID
 ---------------------------------------------
 
@@ -81,7 +85,9 @@ query
     director
   }
 }
-
+ 
+ 
+ 
 #### Get Single Movie By Name
 ---------------------------------------------
 
@@ -97,6 +103,8 @@ query
   }
 }
 
+ 
+ 
 ### Mutation Samples:
 
 #### Save New Movie
@@ -108,7 +116,7 @@ mutation($newMovie:MovieInput!){
   }
 }
 
-*variables*
+*variables:*
 
 {
   "newMovie": {
@@ -121,6 +129,8 @@ mutation($newMovie:MovieInput!){
   }
 }
 
+ 
+ 
 #### Update Movie
 ---------------------------------------------
 
@@ -129,7 +139,7 @@ mutation($newMovie:MovieInput!){
   }
 }
 
-*variables*
+*variables :*
 
 {
   "newMovie": {
@@ -143,6 +153,7 @@ mutation($newMovie:MovieInput!){
 }
 
 
+ 
 #### Delete Movie By Name
 ---------------------------------------------
 
@@ -150,12 +161,14 @@ mutation($name:String!){
   deleteMovieByName(name:$name)
 }
 
-*variables*
+*variables :*
  
 {
   "name": "Space Jam"
 }
 
+ 
+ 
 #### Delete Movie By ID
 ---------------------------------------------
 
@@ -163,7 +176,7 @@ mutation($id:Int!){
   deleteMovieByID(id:$id)
 }
 
-*variables*
+*variables :*
 
 {
   "id": 40
